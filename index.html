@@ -1,149 +1,295 @@
-<!DOCTYPE html> <html> <head> <title>Cloudcroft Pickleball</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com?ckcachebust=13F26B71D6D555412965D7AE3939BDAC" crossorigin> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com?ckcachebust=ED6C597C1B825E1B7D21FB94814777D4" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Sans+Condensed:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://use.typekit.net/wmj6wdn.css">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cloudcroft Pickleball</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-
-	
-  <style>
-
-
-   *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-	all: unset;
-	display: revert;
-}
-
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/* Remove list styles (bullets/numbers) */
-ol, ul, menu {
-	list-style: none;
-}
-
-/* For images to not be able to exceed their container */
-img {
-	max-width: 100%;
-}
-
-/* removes spacing between cells in tables */
-table {
-	border-collapse: collapse;
-}
-
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-	white-space: revert;
-}
-
-/* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
-:where([hidden]){
-	display:none;
-}
-
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly. */
-:where([contenteditable]){
-	-moz-user-modify: read-write;
-	-webkit-user-modify: read-write;
-	overflow-wrap: break-word;
-	-webkit-line-break: after-white-space;
-}
-
-/* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable="true"]) {
-	-webkit-user-drag: element;
-}
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
 
 
-	  .satisfy-regular {
-  font-family: "Satisfy", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
+	<style>
+		/* Reset */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', 'IBM Plex Sans', sans-serif;
+			color: black;
+		}
+
+		body {
+			line-height: 1.6;
+		}
+
+		/* Header and Navigation */
+		header {
+			background: #333;
+			color: #fff;
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 4vw 2vh;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background-color: whitesmoke;
+			color: #222;
+			z-index: 1000;
+		}
+
+		nav .logo img {
+			height: 50px;
+			margin-right: 20px;
+		}
+
+		nav ul {
+			list-style: none;
+			display: flex;
+		}
+
+		nav ul li {
+			margin: 0 15px;
+		}
+
+		nav ul li a {
+			color: steelblue;
+			text-decoration: none;
+			font-size: 1rem;
+		}
+
+		.menu-icon {
+			display: none;
+			cursor: pointer;
+		}
+
+		.nav-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.nav-left, .nav-right {
+			display: flex;
+			align-items: center;
+			list-style: none;
+		}
+
+		.nav-left .logo img {
+			height: 50px;
+			margin-right: 15px;
+		}
+
+		.nav-left .site-title {
+			font-weight: 700;
+			text-align: left;
+			color: #333;
+		}
+
+		.nav-right li {
+			margin: 0 15px;
+		}
+
+		.nav-right li a {
+			color: #333;
+			text-decoration: none;
+			font-size: 1rem;
+		}
+
+		/* Hero Section */
+		.hero {
+			position: relative;
+			width: 100%;
+			padding: 4vw;
+			background: #003333;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.hero img {
+			width: 20%;
+			height: 20%;
+			margin: 8vw auto 2vw auto;
+			opacity: 1;
+		}
+
+		.hero-text {
+		text-align:center!important;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #fff!important
+			}
+
+		.hero-text h1 {
+			font-size: 2.5rem;color: #fff!important
+		}
+
+		.hero-text p {
+			font-size: 1.1rem;
+			line-height: 2rem;
+		}
+
+		/* Main Content */
+		main {
+			background-color:whitesmoke;
+		}
+
+		.info-section {
+			width: 100vw;
+			margin: 2vh auto;
+			text-align: center;
+		}
+
+		.info-content {
+			color: black!important;
+			width: 50%;
+			min-width:500px;
+			border: 0px solid steelblue;
+			margin: 1px auto;
+			padding: 2vh 2vw;
+		}
+
+		.info-content p {
+			color: black!important;
+			text-align:left!important;
+			font-size:.85rem
+	}
+
+		.info-section h2 {
+			color: black;
+			padding:2vw 0;
+			text-align:left
+		}
+
+		/* Footer */
+		footer {
+			background: #003333;
+			color: #fff;
+			text-align: center;
+			padding: 1rem 0;
+			margin-top: 20px;
+			bottom: 0;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			.menu-icon {
+				display: block;
+				font-size:2rem;
+			}
+
+			.nav-right {
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				position: absolute;
+				top: 60px;
+				right: 0;
+				background: white;
+				width: 200px;
+				border: 1px solid #ccc;
+				box-shadow: 0 2px 5px rgba(0,
 
 
-body {
-		display: grid;
-		place-content: center;
-		height: 100vh;
-	
-	  }
+	</style>
 
-	  .content-container {
-		padding:3vh 15vw;
-		text-align:left;
-		margin:20px auto;
-		border-radius:11px!important;
-	  }
+</head>
+<body>
+	<header>
+		<nav class="nav-content">
+			<ul class="nav-left">
+				<li class="logo">
+					<img src="https://dim.mcusercontent.com/cs/906f50122a3566e713ab89726/images/b234fc5e-5074-bbbf-585d-cfba72c63d40.png?w=573&dpr=1" alt="Site Logo">
+				</li>
+				<li class="site-title">Cloudcroft Pickleball</li>
+			</ul>
+			<div class="menu-icon" onclick="toggleMenu()">☰</div>
+			<ul id="nav-menu" class="nav-right">
+				<li><a href="#whoweare">Mission</a></li>
+				<li><a href="services.html">Membership</a></li>
+				<li><a href="gallery.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="hero">
+			<p>
+				<img style="padding-top: 3rem;
+				max-width:150px!important;"
+				src="PAC-Art-300x.png" alt="">
+			</p>
 
-	  div {
+			<p class="hero-text">
 
-		background-color:white;
-		color:darkgreen;
-		font-size:4.53vw!important;
-		font-family: 'satisfy','ibm plex sans'; serif;
-		font-weight: 300!important;
-		text-align: center;
-		letter-spacing:normal!important;
-
-	  }
-
-	  .stroke-text{
-		-webkit-text-stroke:1.5px black!important;
-		-webkit-text-fill-color:white;
-	  }
-
-	
-		.typewriter {
-
-					  overflow: hidden; /* Ensures the content is not revealed until the animation */
-					  margin: 5vh auto 20vh auto !important;
-					  letter-spacing: 0; /* Adjust as needed */
-					  animation: typing 1.95s steps(60, end);
-					}
-
-					/* The typing effect */
-					@keyframes typing {
-					  from {
-						width: 0;
-					  }
-					  to {
-						width: 100%;
-					  }
-					}
-
-					/* The typewriter cursor effect */
-					@keyframes blink-caret {
-					  from,
-					  to {
-						border-color: transparent;
-					  }
-					  50% {
-						border-color: orange;
-					  }
-					}
+				<h1 style="color:white">Cloudcroft Pickleball</h1>
+				<p style="color:white;font-size:1.1rem;line-height:2rem">Home of the</p>
+				<p style="padding:1vw 3vw;font-size:4.5vw;color:#ffcc99;font-family:satisfy, serif">Pickleball Addicts of Cloudcroft</p>
 
 
-	</style> </head> <body> <div class="content-container typewriter">
+				<p style="margin: 2vw auto;;width:50%;border-top:1px solid #fff;"></p>
 
-	  <div><span style="font-family: "Satisfy", cursive;
-  font-weight: 400;
-  font-style: normal;
-">
-Pickleball Addicts of Cloudcroft<br /><br />
-	  </span>		  <span style ="font-family:san-serif,arial;font-size:75%">
-      Coming Very Soon</span>
-		</div> </div>
-		 <!-- scripts -->
-		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		 <script src="custom.js"></script>
+				<p style="width: 60%; max-width:600px;line-height:2rem;
+					margin: 2vw auto 0 auto;
+					font-size:.9rem;
+					color:white;
+					text-align: center;	">
+					<span style="font-weight:700;	color:white;">Play in the clouds.</span>
+					<br />
+					Become a member of the
+					<span style="font-weight: 700;color:#ffcc99">Pickleball Addicts of Cloudcroft</span>
+					and help us promote and enjoy play in beautiful Cloudcroft, NM.
+				</p>
+			</p>
+		</section>
+		<section class="info-section">
+			<div class="info-content">
+				<h2>Join Us Now. Free</h2>
+				<p>Signup form</p>
+			</div>
+		</section>
+		<section id="whoweare" class="info-section">
+			<div class="info-content">
+				<h2>Mission</h2>
+				<p>
+					The Club's purpose is to promote and facilitate the sport of pickleball in Cloudcroft, New Mexico. It aims to foster community engagement, improve members' skills, and provide opportunities for social and competitive play. To work with the Village of Cloudcroft to obtain funding through available means. To improve our relationship with the community and work with both to attract tourists to our village. To assist, when available, other organizations with their fundraisers when pertaining to Pickleball. To work with our youth to offer them another healthy activity.
+				</p>
+			</div>
+		</section>
 
-	   </body> </html>
+		<section class="info-section">
+			<div class="info-content">
+				<h2>Membership</h2>
+				<p>
+					Membership is open to all individuals interested in pickleball, regardless of age, gender, or skill level. Members have the right to participate in all Club activities, vote on Club matters, and run for office. Members must adhere to the Club's Code of Conduct and contribute to a positive and respectful environment. Membership may be revoked at any time by a majority vote of the Board of Directors.
+				</p>
+			</div>
+		</section>
+		<section class="info-section">
+			<div class="info-content">
+				<h2>Who We Are</h2>
+				<p>
+					President: Linda Hamilton<br>
+					Vice-President:<br>
+					Secretary:<br>
+					Treasurer:<br>
+					At-Large 1:<br>
+					At-Large 2:<br>
+					At-Large 3:<br>
+				</p>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024 Pickleball Addicts of Cloudcroft. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
