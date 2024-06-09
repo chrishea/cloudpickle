@@ -15,9 +15,9 @@
 
 	<style type="text/css">
 
-	<style>
-
 	#mc_embed_signup{background:#fff; false;clear:left; max-width:400px;width: 64vw;}
+
+	label {margin-right:2vw;}
 
 		/* Reset */
 		* {
@@ -27,6 +27,12 @@
 			font-family: 'Montserrat', 'IBM Plex Sans', sans-serif!important;
 			color: black;
 		}
+
+
+		a {color:steelblue;font-weight:700;text-decoration:underline!important;}
+
+
+		a {color:steelblue;font-weight:400;font-style:underline}
 
 		body {
 			line-height: 1.6;
@@ -42,7 +48,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 4vw 2vh;
+			padding: 3vw 2vh;
 			position: fixed;
 			top: 0;
 			width: 100%;
@@ -161,12 +167,14 @@
 			border: 0px solid steelblue;
 			margin: 1px auto;
 			padding: 2vh 2vw;
+			border-top:1px solid #373737
 		}
 
 		.info-content p {
 			color: black!important;
 			text-align:left!important;
-			font-size:.85rem
+			font-size:.85rem!important;
+			line-height:170%
 	}
 
 		.info-section h2 {
@@ -175,14 +183,27 @@
 			text-align:left
 		}
 
+
+
+		.mc-field-group {line-height:250%}
+
+
+
+
+		.button:hover {
+			cursor:pointer!important;
+			background-color: rgba(52, 152, 219, 0.5)!important; /* 50% opacity */
+		}
+
 		/* Footer */
 		footer {
 			background: #003333;
-			color: #fff;
+			color: #fff !important;
 			text-align: center;
 			padding: 1rem 0;
 			margin-top: 20px;
 			bottom: 0;
+			font-size:.8rem
 		}
 
 		/* Responsive Design */
@@ -204,10 +225,15 @@
 				border: 1px solid #ccc;
 				box-shadow: 0 2px 5px rgba(0,}
 }
-
+		.nav-menu-mible {display:block}
 
 	</style>
-
+	<script>
+		function toggleMenu() {
+			const navMenu = document.getElementById('nav-menu-list');
+			navMenu.classList.toggle('active');
+		}
+	</script>
 </head>
 <body>
 	<header>
@@ -222,9 +248,9 @@
 			</ul>
 			<div class="menu-icon" onclick="toggleMenu()">☰</div>
 			<ul id="nav-menu" class="nav-right">
-				<li><a href="#whoweare">Mission</a></li>
-				<li><a href="services.html">Membership</a></li>
-				<li><a href="gallery.html">About</a></li>
+				<li><a href="#mission">Mission</a></li>
+				<li><a href="#membership">Membership</a></li>
+				<li><a href="#whoweare">Who We Are</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -280,7 +306,7 @@
 						<div id="mce-responses" class="clear">
 							<div class="response" id="mce-error-response" style="display: none;"></div>
 							<div class="response" id="mce-success-response" style="display: none;"></div>
-						</div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_906f50122a3566e713ab89726_3c09cfc496" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"  style="margin-top:2vh;background-color:steelblue;color:white;padding:8px;border-radius:15px;border:0;font-size:1rem"
+						</div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_906f50122a3566e713ab89726_3c09cfc496" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"  style="margin-top:2vh;background-color:steelblue;color:white;padding:16px;border-radius:15px;border:0;font-size:1rem"
 						value="Subscribe"></div>
 					</div>
 				</form>
@@ -297,7 +323,7 @@
 		</section>
 		<section id="whoweare" class="info-section">
 			<div class="info-content">
-				<h2>Mission</h2>
+				<h2 id="mission">Mission</h2>
 				<p>
 					The Club's purpose is to promote and facilitate the sport of pickleball in Cloudcroft, New Mexico. It aims to foster community engagement, improve members' skills, and provide opportunities for social and competitive play. To work with the Village of Cloudcroft to obtain funding through available means. To improve our relationship with the community and work with both to attract tourists to our village. To assist, when available, other organizations with their fundraisers when pertaining to Pickleball. To work with our youth to offer them another healthy activity.
 				</p>
@@ -306,7 +332,7 @@
 
 		<section class="info-section">
 			<div class="info-content">
-				<h2>Membership</h2>
+				<h2 id="membership">Membership</h2>
 				<p>
 					Membership is open to all individuals interested in pickleball, regardless of age, gender, or skill level. Members have the right to participate in all Club activities, vote on Club matters, and run for office. Members must adhere to the Club's Code of Conduct and contribute to a positive and respectful environment. Membership may be revoked at any time by a majority vote of the Board of Directors.
 				</p>
@@ -314,7 +340,7 @@
 		</section>
 		<section class="info-section">
 			<div class="info-content">
-				<h2>Who We Are</h2>
+				<h2 id="whoweare">Who We Are</h2>
 				<p>
 					President: Linda Hamilton<br>
 					Vice-President:<br>
@@ -324,11 +350,12 @@
 					At-Large 2:<br>
 					At-Large 3:<br>
 				</p>
+				<p style="margin-top:3vh;">Our <a href="#" target="_blank">By laws</a></p>
 			</div>
 		</section>
 	</main>
 	<footer>
-		<p>&copy; 2024 Pickleball Addicts of Cloudcroft. All rights reserved.</p>
+		<p style="	color: #fff !important;">&copy; 2024 Pickleball Addicts of Cloudcroft. All rights reserved.</p>
 	</footer>
 
 
