@@ -11,14 +11,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 
+<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
 
 	<style>
+
+	#mc_embed_signup{background:#fff; false;clear:left; max-width:400px;width: 64vw;}
+
 		/* Reset */
 		* {
 			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
-			font-family: 'Montserrat', 'IBM Plex Sans', sans-serif;
+			font-family: 'Montserrat', 'IBM Plex Sans', sans-serif!important;
 			color: black;
 		}
 
@@ -197,46 +203,7 @@
 				width: 200px;
 				border: 1px solid #ccc;
 				box-shadow: 0 2px 5px rgba(0,}
-
-							     /* Style the navigation bar */
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-  }
-
-  /* Navigation bar links */
-  .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  /* Dropdown button */
-  .dropbtn {
-    display: none;
-  }
-
-  /* Dropdown content */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  /* Show the dropdown menu */
-  .show {display: block;}
-
-  /* Media query for iPhone */
-  @media screen and (max-width: 480px) {
-    .navbar a {display: none;} /* Hide the links */
-    .dropbtn {display: block;} /* Show the dropdown button */
-  }
+}
 
 
 	</style>
@@ -244,22 +211,27 @@
 </head>
 <body>
 	<header>
-		<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <button class="dropbtn" onclick="myFunction()">☰</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
+		<nav class="nav-content">
+			<ul class="nav-left">
+				<li class="logo">
+				<a href="www.cloudcroftpickleball.com">
+						<img src="PAC-Art-300x.png" alt="Site Logo">
+				</a>
+				</li>
+				<li class="site-title">Cloudcroft Pickleball</li>
+			</ul>
+			<div class="menu-icon" onclick="toggleMenu()">☰</div>
+			<ul id="nav-menu" class="nav-right">
+				<li><a href="#whoweare">Mission</a></li>
+				<li><a href="services.html">Membership</a></li>
+				<li><a href="gallery.html">About</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
 		<section class="hero">
 			<p>
-				<img style="padding-top: 3rem;
+				<img style="padding-top:4vh;
 				max-width:150px!important;"
 				src="PAC-Art-300x.png" alt="">
 			</p>
@@ -268,7 +240,7 @@
 
 				<h1 style="color:white">Cloudcroft Pickleball</h1>
 				<p style="color:white;font-size:1.1rem;line-height:2rem">Home of the</p>
-				<p style="padding:1vw 3vw;font-size:4.5vw;color:#ffcc99;font-family:satisfy, serif">Pickleball Addicts of Cloudcroft</p>
+				<p style="padding:1vw 3vw;font-size:4.5vw;color:#ffcc99;font-family:satisfy, serif!important">Pickleball Addicts of Cloudcroft</p>
 
 
 				<p style="margin: 2vw auto;;width:50%;border-top:1px solid #fff;"></p>
@@ -288,8 +260,39 @@
 		</section>
 		<section class="info-section">
 			<div class="info-content">
-				<h2>Join Us Now. Free</h2>
-				<p>Signup form</p>
+				<h2>Join Us Now. <span style="color:#777">Free</span></h2>
+				<p>
+<div id="mc_embed_shell">
+
+				<div id="mc_embed_signup">
+					<form action="https://cloudcroftreader.us1.list-manage.com/subscribe/post?u=906f50122a3566e713ab89726&amp;id=3c09cfc496&amp;f_id=003cc3e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+						<div id="mc_embed_signup_scroll"
+						style="text-align:left!important;padding:2vw!important;line-height:200%;font-size:.85rem!important">
+
+							<div class="mc-field-group" >
+								<label for="mce-EMAIL">Email Address</label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+							<div class="mc-field-group" style="text-left!important;"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
+
+							<div class="mc-field-group" style="text-left!important;"><label for="mce-LNAME">Last Name </label><input type="text" name="LNAME" class=" text" id="mce-LNAME" value=""></div>
+
+							<div class="mc-field-group" style="text-left!important;"><label for="mce-ZIP">Zip code </label><input type="zip" name="ZIP" class=" zip" id="mce-ZIP" value=""></div>
+
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display: none;"></div>
+							<div class="response" id="mce-success-response" style="display: none;"></div>
+						</div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_906f50122a3566e713ab89726_3c09cfc496" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"  style="margin-top:2vh;background-color:steelblue;color:white;padding:8px;border-radius:15px;border:0;font-size:1rem"
+						value="Subscribe"></div>
+					</div>
+				</form>
+				</div>
+				</div>
+
+
+					</form>
+					</div>
+					<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[5]='ZIP';ftypes[5]='zip';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+				</p>
 			</div>
 		</section>
 		<section id="whoweare" class="info-section">
@@ -327,27 +330,10 @@
 	<footer>
 		<p>&copy; 2024 Pickleball Addicts of Cloudcroft. All rights reserved.</p>
 	</footer>
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+
+
+
 
 </body>
 </html>
